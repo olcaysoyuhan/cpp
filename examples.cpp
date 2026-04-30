@@ -1,12 +1,27 @@
 #include <iostream>
 
+int number{};
+short int i{};
+
 int main()
 {
-    int number{};
-    std::string result{};
-    std::cout << "Enter a number: ";
-    std::cin >> number;
-    std::cout << "You entered: " << number << "\n";
-    result = (number >= 0) ? "Positive" : "Negative";
-    std::cout << "The number is: " << result << "\n";
+    while (true)
+    {
+        i = 1;
+        std::cout << "Enter a number: ";
+        std::cin >> number;
+        if (number != 0)
+        {
+            while (i <= 10)
+            {
+                std::cout << number << " x " << i << " = " << number * i << "\n";
+                i++;
+            }
+        }
+        else
+        {
+            std::cout << "Exiting the program!" << "\n";
+            break;
+        }
+    }
 }
