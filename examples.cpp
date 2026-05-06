@@ -1,27 +1,13 @@
 #include <iostream>
+#include <iomanip>
+#include <string>
 
-int number{};
-short int i{};
+std::string name{"Olcay"};
 
 int main()
 {
-    while (true)
-    {
-        i = 1;
-        std::cout << "Enter a number: ";
-        std::cin >> number;
-        if (number != 0)
-        {
-            while (i <= 10)
-            {
-                std::cout << number << " x " << i << " = " << number * i << "\n";
-                i++;
-            }
-        }
-        else
-        {
-            std::cout << "Exiting the program!" << "\n";
-            break;
-        }
-    }
+    std::cout << name << "\n";
+    std::cout << std::setw(10) << name << "\n";
+    std::cout << std::right << std::setw(20) << name << "\n";
+    std::cout << std::setfill('*') << std::setw(50) << name << "\n";
 }
