@@ -1,15 +1,18 @@
 #include <iostream>
-#include <string>
 
-void message(const std::string &name)
+int sum(int x, int y)
 {
-    std::cout << "Hello, " << name << '\n';
+    return x + y;
+}
+
+int get(int (*callback)(int, int))
+{
+    int result = callback(5, 4);
+    return result;
 }
 
 int main()
 {
-    std::string name{};
-    std::cout << "Enter your name: ";
-    std::getline(std::cin, name);
-    message(name);
+    int finalResult = get(sum);
+    std::cout << "Sonuç: " << finalResult << '\n';
 }
