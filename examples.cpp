@@ -40,6 +40,12 @@ int main()
             continue;
         }
 
+        if (number <= 1)
+        {
+            std::cout << "Please enter a number greater than 1.\n";
+            continue;
+        }
+
         for (int i = 2; i <= number; i++)
         {
             if (isPrime(i))
